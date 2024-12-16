@@ -46,6 +46,7 @@ async def remove_missing_files(
                         queueItem["errorMessage"]
                         == "DownloadClientQbittorrentTorrentStateMissingFiles"
                         or queueItem["errorMessage"] == "The download is missing files"
+                        or queueItem["errorMessage"] == "qBittorrent is reporting missing files"
                     )
                 ):
                     affectedItems.append(queueItem)
